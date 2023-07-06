@@ -22,7 +22,6 @@ export interface IBoton {
     activo: boolean;    
 }
 
-// ${props => props.classname}
 const BioBoton = styled.button<IBoton> `
     border-radius: 5px;
     border: 1px solid darkgray;

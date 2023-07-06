@@ -39,25 +39,6 @@ const Bio = () => {
         </div>
       </div>
     </BioContainer>
-
-
-    /*
-    <div className={styles.bioContainer}>
-      <div className={styles.contenedorBotones}>{crearBotones()}</div>
-      <div>
-        <div>
-          <img
-            src={bioActiva.image}
-            alt={bioActiva.nombre}
-            className={styles.bioImagen}
-          />
-        </div>
-        <div>
-          <h3 className={styles.bioNombre}>{bioActiva.nombre}</h3>
-          <p className={styles.bioDescripcion}>{bioActiva.descripcion}</p>
-        </div>
-      </div>
-    </div>*/
   );
 };
 
