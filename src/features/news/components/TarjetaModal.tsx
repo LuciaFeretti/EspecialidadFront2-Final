@@ -1,9 +1,8 @@
-import { ContenedorModal, TarjetaModal, CloseButton, ImagenModal, CotenedorTexto, TituloModal, DescripcionModal, BotonSuscribir} from "./styled"
-import { SuscribeImage, CloseButton as Close } from "../../assets";
-import { INoticiasNormalizadas } from "./interfaces";
+import { ContenedorModal, TarjetaModal, CloseButton, ImagenModal, CotenedorTexto, TituloModal, DescripcionModal, BotonSuscribir} from "../styled"
+import { SuscribeImage, CloseButton as Close } from "../../../assets";
+import { INoticiasNormalizadas } from "../interfaces";
 
 interface ITarjModalProps {
-    //noticia: INoticiasNormalizadas | null
     noticia: INoticiasNormalizadas
     setNoticia: React.Dispatch<React.SetStateAction<INoticiasNormalizadas | null>>
 }

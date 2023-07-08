@@ -1,5 +1,5 @@
-import { TarjetaNoticia, ImagenTarjetaNoticia, TituloTarjetaNoticia, FechaTarjetaNoticia, DescripcionTarjetaNoticia, BotonLectura } from "./styled"
-import { INoticiasNormalizadas } from "./interfaces"
+import { TarjetaNoticia, ImagenTarjetaNoticia, TituloTarjetaNoticia, FechaTarjetaNoticia, DescripcionTarjetaNoticia, BotonLectura } from "../styled"
+import { INoticiasNormalizadas } from "../interfaces"
 
 interface ITarjNoticiaProps {
     noticia: INoticiasNormalizadas,
