@@ -7,14 +7,13 @@ import citaSlice from "./features/quote/citaSlice";
 import { RootState } from "./app/store";
 
 // Creamos el custom render
-/*
 const customRender = (
     ui: React.ReactElement,
     {
         preloadedState,
         store = configureStore({
         reducer: {
-            quote: citaSlice,
+            cita: citaSlice,
         },
         preloadedState,
         }),
@@ -39,4 +38,3 @@ export * from "@testing-library/react";
 
 // sobrescribimos el método render.
 export { customRender as render };
-*/
