@@ -6,6 +6,15 @@ interface ITarjNoticiaProps {
     setModal: React.Dispatch<React.SetStateAction<INoticiasNormalizadas | null>>
 }
 
+/**
+ * Componente TarjNoticia
+ * Muestra una tarjeta con información de una noticia
+ * @param {ITarjNoticiaProps} - props 
+ * @property {INoticiasNormalizadas} noticia - Noticia a mostrar en la tarjeta
+ * @property {React.Dispatch<React.SetStateAction<INoticiasNormalizadas | null>>} setModal - Funcion que actualiza el estado del modal
+ * @returns {JSX.Element}
+ */
+
 const TarjNoticia = ({ noticia, setModal }: ITarjNoticiaProps) => {
     return (
         <TarjetaNoticia>
@@ -19,4 +28,5 @@ const TarjNoticia = ({ noticia, setModal }: ITarjNoticiaProps) => {
         </TarjetaNoticia>
     )
 }
+
 export default TarjNoticia;

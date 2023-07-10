@@ -1,6 +1,11 @@
 import { INoticias, obtenerNoticias } from "./fakeRest";
 import { INoticiasNormalizadas } from "./interfaces";
 
+/**
+ * Convierte la primera letra de cada palabra en mayuscula
+ * @param {string} titulo - titulo a convertir
+ * @returns {string} - el titulo con las primeras letras de cada palabra en mayuscula
+ */
 const pasarMayuscula = (titulo: string) => { 
     return titulo
             .split(" ")
@@ -10,6 +15,11 @@ const pasarMayuscula = (titulo: string) => {
             .join(" ");
 }
 
+/**
+ * Calcula la cantidad de minutos transcurridos entre la fecha dada y el momento actual
+ * @param {Date} fecha - Fecha a calcular
+ * @returns {number} - Cantidad de minutos transcurridos
+ */
 const calcularMinutos = (fecha : Date) => {
     const ahora = new Date();
         const minutosTranscurridos = Math.floor(
@@ -18,6 +28,11 @@ const calcularMinutos = (fecha : Date) => {
     return minutosTranscurridos;
 }
 
+/**
+ * Normaliza una noticia
+ * @param {INoticias} noticia - Noticia a normalizar
+ * @returns {INoticiasNormalizadas} - Noticia normalizada
+ */
 const normalizar = (noticia: INoticias) => { 
     return { 
         id: noticia.id,
@@ -30,6 +45,11 @@ const normalizar = (noticia: INoticias) => {
     }
 }
 
+/**
+ * Obtiene la información de las noticias y actualiza el estado
+ * @param {React.Dispatch<React.SetStateAction<INoticiasNormalizadas[]>>} setNoticias - funcion que actualiza el estado de las noticias
+ * @returns {void}
+ */
 const obtenerInformacion = async (setNoticias:React.Dispatch<React.SetStateAction<INoticiasNormalizadas[]>>) => { 
     const respuesta = await obtenerNoticias();
     const data = respuesta.map((noticia) => {

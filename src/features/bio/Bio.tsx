@@ -3,14 +3,30 @@ import { NombresSimpsons, INFO_SIMPSONS } from "./constants";
 //import styles from "./styles.module.css";
 import { BioContainer, BioImagen, BioNombre, BioDescripcion, ContenedorBotones, BioBoton } from "./styled";
 
+/**
+ * Componente Bio
+ * Muestra la biografia de cada personaje de Los Simpsons
+ * @returns {JSX.Element} Con botones de cada personaje, imagen, nombre y descripcion del personaje seleccionado
+ */
+
 const Bio = () => {
   const [bioActiva, setBioActiva] = useState(
     INFO_SIMPSONS[NombresSimpsons.BART]
   );
 
+  /**
+   * Actualiza la biografia del personaje seleccionado
+   * @param {NombresSimpsons} nombre - Nombre del personaje
+   * @returns {void}
+   */
   const onClick: (nombre: NombresSimpsons) => void = (nombre) =>
     setBioActiva(INFO_SIMPSONS[nombre]);
 
+
+  /**
+   * Crea los botones de cada personaje
+   * @returns {JSX}
+   */
   const crearBotones = () => {
     return Object.keys(INFO_SIMPSONS).map((nombre: string) => (
       <BioBoton

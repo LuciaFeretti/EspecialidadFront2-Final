@@ -7,6 +7,13 @@ interface ITarjModalProps {
     setNoticia: React.Dispatch<React.SetStateAction<INoticiasNormalizadas | null>>
 }
 
+/**
+ * Componente TarjModal
+ * @param {ITarjModalProps} - props
+ * @property {INoticiasNormalizadas } noticia - noticia a mostrar en el modal
+ * @property {React.Dispatch<React.SetStateAction<INoticiasNormalizadas | null >>} setNoticia - función que actualiza el estado de la noticia
+ *  @returns {JSX.Element}
+ */
 const TarjModal = ( {noticia, setNoticia}: ITarjModalProps )=>{
     const tituloPremium = "Suscríbete a nuestro Newsletter"
     const descripPremium = "Suscríbete a nuestro newsletter y recibe noticias de nuestros personajes favoritos."

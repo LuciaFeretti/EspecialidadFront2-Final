@@ -10,6 +10,11 @@ import {
 } from "./citaSlice";
 import { obtenerMensaje } from "./utils";
 
+/**
+ * Componente Cita
+ * Muestra una cita obtenida, aleatoriamente o buscando por nombre, de una API. Tambien permite borrar la cita actual
+ * @returns {JSX.Element} 
+*/
 function Cita() {
   const [valorInput, setValorInput] = useState("");
   const { cita = "", personaje = "" } =
@@ -18,8 +23,16 @@ function Cita() {
 
   const dispatch = useAppDispatch();
 
+  /**
+   * Obtiene una cita de la API utilizando el valor del input
+   * @returns {void}
+   */
   const onClickObtenerCita = () => dispatch(obtenerCitaDeLaAPI(valorInput));
 
+  /**
+   * Borra la cita actual y el valor del input
+   * @returns {void}
+   */
   const onClickBorrar = () => {
     dispatch(limpiar());
     setValorInput("");

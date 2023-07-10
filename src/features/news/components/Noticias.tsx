@@ -8,9 +8,9 @@ lado (no solo en este componente), por lo que puede crearse una función utilita
 realizar esta tarea cada vez que sea necesario. Recuerda además lo aprendido sobre los 
 distintos principios SOLID al momento de pensar en las oportunidades de refactorización 
 que se nos presentan en este caso. 
-
 Se espera que al menos puedan aplicar 1 principio SOLID para resolver la primera consigna, 
 explicando en un comentario en qué parte del código podemos ver dicha aplicación.*/
+
 
 
 // De los principios SOLID apliqué el principio de responsabilidad unica en el componente 
@@ -19,7 +19,6 @@ explicando en un comentario en qué parte del código podemos ver dicha aplicaci
 // forma, cada componente es responsable de una sola tarea.
 // También cree un archivo 'utils' donde extraje funciones (pasarMayuscula, calcularMinutos, 
 // normalizar, obtenerInformacion) para que puedan ser reutilizadas 
-
 
 import { useEffect, useState } from "react";
 import {
@@ -31,6 +30,12 @@ import {INoticiasNormalizadas} from '../interfaces';
 import {obtenerInformacion} from "../utils";
 import TarjModal from "./TarjetaModal";
 import TarjNoticia from "./TarjetaNoticia";
+
+/**
+ * Componente Noticias
+ * Muestra una lista de noticias de Los Simpsons
+ * @returns {JSX.Element}
+ */
 
 const Noticias = () => {
   const [noticias, setNoticias] = useState<INoticiasNormalizadas[]>([]);
